@@ -1,7 +1,6 @@
 #include "Resource.hpp"
 #include "Square.hpp"
 #include "Defs.hpp"
-#include <Common/game.hpp>
 
 // ---
 void PieceThreeInARow::drawOn (QGAMES::Screen* s, const QGAMES::Position& p)

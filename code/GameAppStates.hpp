@@ -1,10 +1,12 @@
+/** \addtogroup 3InARow */
+/*@{*/
+
 #ifndef __GAMEAPPSTATES_HPP__
 #define __GAMEAPPSTATES_HPP__
 
-#include <Common/gamestate.hpp>
-#include <Common/entity.hpp>
-#include "Square.hpp"
 #include "Defs.hpp"
+#include "Square.hpp"
+#include <Board/boardinclude.hpp>
 
 /** A class to define text drawn
 	during the presentation. */
@@ -137,3 +139,6 @@ class GameApplicationWinsState : public QGAMES::GameState
 }; 
 
 #endif
+  
+// End of the file
+/*@}*/

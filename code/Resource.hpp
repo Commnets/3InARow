@@ -1,7 +1,10 @@
+/** \addtogroup 3InARow */
+/*@{*/
+
 #ifndef __RESOURCE_HPP__
 #define __RESOURCE_HPP__
 
-#include <Board/boardresource.hpp>
+#include <Board/boardinclude.hpp>
 
 /** Represents one of the pieces the players can put in one of the squares of the game.
 	The group received as parameter matches the id of the player the`piece belongs to. */
@@ -21,3 +24,6 @@ class PieceThreeInARow : public QGAMES::BoardResource
 };
 
 #endif
+  
+// End of the file
+/*@}*/

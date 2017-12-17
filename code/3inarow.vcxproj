@@ -56,7 +56,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;__QGAMES_SDLLIBRARY__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\CPPLIBS\SDL2-2.0.0\include;..\..\..\CPPLIBS\SDL2_image-2.0.0\include;..\..\..\CPPLIBS\SDL2_mixer-2.0.0\include;..\..\..\CPPLIBS\SDL2_gfx-1.0.1;..\..\projects\tinyxml;..\..\projects\tmxparser;..\..\include</AdditionalIncludeDirectories>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
@@ -75,7 +75,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;__QGAMES_SDLLIBRARY__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\CPPLIBS\SDL2-2.0.0\include;..\..\..\CPPLIBS\SDL2_image-2.0.0\include;..\..\..\CPPLIBS\SDL2_mixer-2.0.0\include;..\..\..\CPPLIBS\SDL2_gfx-1.0.1;..\..\projects\tinyxml;..\..\projects\tmxparser;..\..\include</AdditionalIncludeDirectories>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
@@ -95,11 +95,11 @@
     <ClInclude Include="Board.hpp" />
     <ClInclude Include="BoardBuilder.hpp" />
     <ClInclude Include="Defs.hpp" />
+    <ClInclude Include="doxy.hpp" />
     <ClInclude Include="Entities.hpp" />
     <ClInclude Include="EntitiesBuilder.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="GameApp.hpp" />
-    <ClInclude Include="GameAppImpl.hpp" />
     <ClInclude Include="GameAppStates.hpp" />
     <ClInclude Include="InputHandler.hpp" />
     <ClInclude Include="Movements.hpp" />
@@ -109,7 +109,6 @@
     <ClInclude Include="Square.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="Timer.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
@@ -118,7 +117,6 @@
     <ClCompile Include="EntitiesBuilder.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameApp.cpp" />
-    <ClCompile Include="GameAppImpl.cpp" />
     <ClCompile Include="GameAppStates.cpp" />
     <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="main.cpp" />

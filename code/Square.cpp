@@ -1,6 +1,5 @@
 #include "Square.hpp"
 #include "Defs.hpp"
-#include <Common/game.hpp>
 
 // ---
 bool Square3InARow::isIn (const QGAMES::Position& pos)

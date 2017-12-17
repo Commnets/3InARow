@@ -1,8 +1,11 @@
+/** \addtogroup 3InARow */
+/*@{*/
+
 #ifndef __ENTITIES_HPP__
 #define __ENTITIES_HPP__
 
-#include <Common/entity.hpp>
 #include "Defs.hpp"
+#include <Board/boardinclude.hpp>
 
 /** Just the entity appearing in the game. */
 class EntityAnimating3InARow : public QGAMES::Entity
@@ -17,3 +20,6 @@ class EntityAnimating3InARow : public QGAMES::Entity
 };
 
 #endif
+  
+// End of the file
+/*@}*/

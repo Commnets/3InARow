@@ -1,7 +1,10 @@
+/** \addtogroup 3InARow */
+/*@{*/
+
 #ifndef __PLAYER_HPP__
 #define __PLAYER_HPP__
 
-#include <Board/boardgameplayer.hpp>
+#include <Board/boardinclude.hpp>
 
 /** Represents the state of the player.
 	In this case there are only two variables: The square origin of a movement
@@ -46,3 +49,6 @@ class Player3InARow : public QGAMES::BoardGamePlayer
 };
 
 #endif
+  
+// End of the file
+/*@}*/

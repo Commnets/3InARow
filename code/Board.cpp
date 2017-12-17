@@ -1,6 +1,4 @@
 #include "Board.hpp"
-#include "Defs.hpp"
-#include <Common/game.hpp>
 
 // ---
 void Board3InARow::initialize ()

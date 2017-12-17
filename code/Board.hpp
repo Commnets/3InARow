@@ -1,8 +1,11 @@
+/** \addtogroup 3InARow */
+/*@{*/
+
 #ifndef __BOARD_HPP__
 #define __BOARD_HPP__
 
-#include <Board/board.hpp>
 #include "Defs.hpp"
+#include <Board/boardinclude.hpp>
 
 /** The board of the tic tac toe game. */
 class Board3InARow : public QGAMES::Board
@@ -20,3 +23,6 @@ class Board3InARow : public QGAMES::Board
 };
 
 #endif
+  
+// End of the file
+/*@}*/

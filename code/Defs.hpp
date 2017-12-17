@@ -1,15 +1,8 @@
+/** \addtogroup 3InARow */
+/*@{*/
+
 #ifndef __DEFS__
 #define __DEFS__
-
-#include <SDL.h>
-
-// Definition files...
-#define __ENTITIESFILE__				"entities.xml"
-#define __MOVEMENTSFILE__				"movements.xml"
-#define __FORMSFILE__					"forms.xml"
-#define __OBJECTSFILE__					"objects.xml"
-#define __SOUNDSFILE__					"sounds.xml"
-#define __BOARDBUILDERDEFFILE__			"boards.xml"
 
 // Main parameters of the screen game...
 #define __GAMESNAME__					"ICF 3 In a Row Game"
@@ -98,3 +91,6 @@
 #define __CHANGESTATUSTOWIN__			1001
 
 #endif
+  
+// End of the file
+/*@}*/

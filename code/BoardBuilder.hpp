@@ -1,7 +1,10 @@
+/** \addtogroup 3InARow */
+/*@{*/
+
 #ifndef __BOARDBUILDER_HPP__
 #define __BOARDBUILDER_HPP__
 
-#include <Board/boardbuilder.hpp>
+#include <Board/boardinclude.hpp>
 
 /** To create the board Tic Tac Toe. */
 class BoardBuilderAddsOn : public QGAMES::BasicBoardAddsOn
@@ -22,3 +25,6 @@ class BoardBuilderAddsOn : public QGAMES::BasicBoardAddsOn
 };
 
 #endif
+  
+// End of the file
+/*@}*/

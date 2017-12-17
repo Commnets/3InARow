@@ -1,8 +1,5 @@
 #include "Game.hpp"
 #include "Square.hpp"
-#include <Common/event.hpp>
-#include <iostream>
-#include <Common/resourcesreader.hpp>
 
 // ---
 TheGame::TheGame (const QGAMES::Boards& b, const QGAMES::BoardGameRules& rules, 

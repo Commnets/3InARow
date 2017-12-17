@@ -1,8 +1,11 @@
+/** \addtogroup 3InARow */
+/*@{*/
+
 #ifndef __MOVEMENTS_HPP__
 #define __MOVEMENTS_HPP__
 
-#include <Common/movement.hpp>
 #include "Defs.hpp"
+#include <Board/boardinclude.hpp>
 
 /** Describe the movement of the entities moving across the board
 	leaving thing to be eaten by the players during the game. */
@@ -27,3 +30,6 @@ class MovementAnimating : public QGAMES::Movement
 // Another movements can be added here...
 
 #endif
+  
+// End of the file
+/*@}*/

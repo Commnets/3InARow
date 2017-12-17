@@ -2,19 +2,17 @@
 #include "EntitiesBuilder.hpp"
 #include "MovementsBuilder.hpp"
 #include "Movements.hpp"
-#include "Timer.hpp"
 #include "BoardBuilder.hpp"
 #include "Game.hpp"
 #include "GameAppStates.hpp"
 #include "Player.hpp"
+#include "InputHandler.hpp"
 #include "Defs.hpp"
-#include <Common/resourcesreader.hpp>
-#include <SDL/sdlformbuilder.hpp>
-#include <SDL/sdlsoundbuilder.hpp>
+#include <graphicsinclude.hpp>
 
 // ---
 GameApplication::GameApplication ()
-		: QGAMES::BoardGameApplication (new GameApplicationImpl ())
+		: QGAMES::BoardGameApplication (new __QGAMESGRAPHICSLIBRARY_IMPLEMENTATIONCLASS__ ())
 {
 #ifdef NDEBUG
 	// If the data parameter exists, then changes the default temporal file...
@@ -26,66 +24,38 @@ GameApplication::GameApplication ()
 }
 
 // ---
-void GameApplication::addScoreObjects ()
-{
-}
-
-// ---
-void GameApplication::removeScoreObjects ()
-{
-}
-
-// ---
 void GameApplication::reset ()
 {
 	((TheGame*) _boardGame) -> reset ();
 }
 
 // ---
-QGAMES::FormBuilder* GameApplication::createFormBuilder ()
-{
-	return (new SDL2DSpriteBuilder (std::string (__FORMSFILE__), 
-		(SDLScreen*) mainScreen ())); 
-}
-
-// ---
-QGAMES::ObjectBuilder* GameApplication::createObjectBuilder ()
-{
-	return (new QGAMES::ObjectBuilder (std::string (__OBJECTSFILE__), formBuilder ()));
-}
-
-// ---
 QGAMES::EntityBuilder* GameApplication::createEntityBuilder ()
 {
-	return (new EntitiesBuilder (__ENTITIESFILE__, 
+	return (new EntitiesBuilder (parameter (__GAME_PROPERTYENTITIESFILE__), 
 		formBuilder (), movementBuilder ())); 
 }
 
 // ---
 QGAMES::MovementBuilder* GameApplication::createMovementBuilder ()
 {
-	return (new MovementsBuilder (__MOVEMENTSFILE__)); 
+	return (new MovementsBuilder (parameter (__GAME_PROPERTYMOVEMENTSFILE__))); 
 }
 
 // ---
-QGAMES::SoundBuilder* GameApplication::createSoundBuilder ()
+QGAMES::InputHandler* GameApplication::createInputHandler ()
 {
-	return (new SDLSoundBuilder (__SOUNDSFILE__)); 
-}
-
-// ---
-QGAMES::Timer* GameApplication::createTimer ()
-{
-	return (new Timer ()); 
+	return (implementation () -> createInputHandler (new InputHandler ()));
 }
 
 // ---
 QGAMES::Screens GameApplication::createScreens ()
 {
 	QGAMES::Screens r;
-	SDLScreen* scr = new SDLScreen (__GAMESNAME__, 
-		 QGAMES::Position (0,0), __SCREENWIDTH__, __SCREENHEIGHT__, __SCREENXPOS__, __SCREENYPOS__);
-	scr -> windowAtCenter ();
+	QGAMES::Screen* scr = implementation () -> createScreen (std::string (__GAMESNAME__),
+		QGAMES::Position (0,0), __SCREENWIDTH__, __SCREENHEIGHT__, __SCREENXPOS__, __SCREENYPOS__);
+	assert (scr); // Just in case. It should happen anything but...!
+	scr -> windowAtCenter (); // To center the screen...
 	r.insert (QGAMES::Screens::value_type (__QGAMES_MAINSCREEN__, scr));
 	return (r); 
 }
@@ -93,7 +63,7 @@ QGAMES::Screens GameApplication::createScreens ()
 // ---
 QGAMES::BoardBuilder* GameApplication::createBoardBuilder ()
 {
-	QGAMES::BoardBuilder* result = new QGAMES::BoardBuilder (__BOARDBUILDERDEFFILE__);
+	QGAMES::BoardBuilder* result = new QGAMES::BoardBuilder (parameter (__GAME_PROPERTYBOARDSFILE__));
 	result -> addAddsOn (new BoardBuilderAddsOn ());
 	return (result);
 }

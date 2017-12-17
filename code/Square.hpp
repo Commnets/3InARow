@@ -1,7 +1,10 @@
+/** \addtogroup 3InARow */
+/*@{*/
+
 #ifndef __SQUARE_HPP__
 #define __SQUARE_HPP__
 
-#include <Board/boardsquare.hpp>
+#include <Board/boardinclude.hpp>
 
 /** Represents an square in the Tic Tac Toe game. */
 class Square3InARow : public QGAMES::BoardSquare
@@ -20,3 +23,6 @@ class Square3InARow : public QGAMES::BoardSquare
 };
 
 #endif
+  
+// End of the file
+/*@}*/

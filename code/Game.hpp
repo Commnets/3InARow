@@ -1,8 +1,11 @@
+/** \addtogroup 3InARow */
+/*@{*/
+
 #ifndef __GAME_HPP__
 #define __GAME_HPP__
 
-#include <Board/boardgame.hpp>
 #include "Defs.hpp"
+#include <Board/boardinclude.hpp>
 
 /** In this case, the state keeps who has the turn, and who wins. */
 class GameState : public QGAMES::BoardGame::State
@@ -82,3 +85,6 @@ class TheGame : public QGAMES::BoardGame
 };
 
 #endif
+  
+// End of the file
+/*@}*/

@@ -3,17 +3,6 @@
 #include "GameAppStates.hpp"
 
 // ---
-void InputHandler::onJoystickAxisMoveEvent (QGAMES::JoystickMovementEventData* dt)
-{
-}
-
-// ---
-void InputHandler::onJoystickButtonEvent (QGAMES::JoystickButtonEventData* dt)
-{
-
-}
-
-// ---
 void InputHandler::onKeyboardEvent (QGAMES::KeyboardEventData* dt)
 {
 	int kPressed = -1;
@@ -28,7 +17,7 @@ void InputHandler::onKeyboardEvent (QGAMES::KeyboardEventData* dt)
 		}
 	}
 	else
-		_lastKey = dt -> _key;
+		_lastKey = dt ->_internalCode; // The code translated into QGAMES style...
 
 	if (pKey)
 	{
@@ -58,11 +47,6 @@ void InputHandler::onKeyboardEvent (QGAMES::KeyboardEventData* dt)
 }
 
 // ---
-void InputHandler::onMouseMovementEvent (QGAMES::MouseMovementEventData* dt)
-{
-}
-
-// ---
 void InputHandler::onMouseButtonEvent (QGAMES::MouseButtonEventData* dt)
 {
 	int gS = _game -> activeState () -> type ();
@@ -70,7 +54,7 @@ void InputHandler::onMouseButtonEvent (QGAMES::MouseButtonEventData* dt)
 	{
 		case __GAMESTATESELECTSQUARE__:
 			{
-				QGAMES::MouseMovementEventData mPos = whereIsMouse ();
+				QGAMES::MouseMovementEventData mPos = game () -> inputHandler () -> whereIsMouse ();
 				if (dt -> _on == false)
 					((GameApplicationSelectSquareState*) _game -> activeState ()) 
 						-> squareSelectedOn (mPos._x, mPos._y);
@@ -96,25 +80,26 @@ void InputHandler::manageKeyOnIntroState (int k)
 // ---
 void InputHandler::manageKeyOnSelectSquareState (int k)
 {
-	if (k == SDL_SCANCODE_RETURN)
+	if (k == QGAMES::KeyCode::QGAMES_RETURN)
 		((GameApplicationSelectSquareState*) _game -> activeState ()) -> squareSelected ();
 	else
-	if (k == SDL_SCANCODE_LEFT)
+	if (k == QGAMES::KeyCode::QGAMES_LEFT)
 		((GameApplicationSelectSquareState*) _game -> activeState ()) -> squareLeft ();
 	else
-	if (k == SDL_SCANCODE_RIGHT)
+	if (k == QGAMES::KeyCode::QGAMES_RIGHT)
 		((GameApplicationSelectSquareState*) _game -> activeState ()) -> squareRight ();
 	else
-	if (k == SDL_SCANCODE_UP)
+	if (k == QGAMES::KeyCode::QGAMES_UP)
 		((GameApplicationSelectSquareState*) _game -> activeState ()) -> squareUp ();
 	else
-	if (k == SDL_SCANCODE_DOWN)
+	if (k == QGAMES::KeyCode::QGAMES_DOWN)
 		((GameApplicationSelectSquareState*) _game -> activeState ()) -> squareDown ();
 }
 
 // ---
 void InputHandler::manageKeyOnPlayingState (int k)
 {
+	// TODO
 }
 
 // ---
