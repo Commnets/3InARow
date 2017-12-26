@@ -29,4 +29,3 @@ int _tmain (int argc, char *argv [])
 	game.exec ();
 	return (0);
 }
-
