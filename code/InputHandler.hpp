@@ -17,7 +17,7 @@ class InputHandler : public QGAMES::InputHandler::Behaviour
 
 	virtual void onJoystickAxisMoveEvent (QGAMES::JoystickMovementEventData* dt) { }
 	virtual void onJoystickButtonEvent (QGAMES::JoystickButtonEventData* dt) { }
-	virtual void onKeyboardEvent (QGAMES::KeyboardEventData* dt);
+	virtual void onKeyboardEvent (QGAMES::KeyBoardEventData* dt);
 	virtual void onMouseMovementEvent (QGAMES::MouseMovementEventData* dt) { }
 	virtual void onMouseButtonEvent (QGAMES::MouseButtonEventData* dt);
 

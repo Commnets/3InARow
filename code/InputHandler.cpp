@@ -3,7 +3,7 @@
 #include "GameAppStates.hpp"
 
 // ---
-void InputHandler::onKeyboardEvent (QGAMES::KeyboardEventData* dt)
+void InputHandler::onKeyboardEvent (QGAMES::KeyBoardEventData* dt)
 {
 	int kPressed = -1;
 	bool pKey = false;
