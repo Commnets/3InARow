@@ -105,6 +105,7 @@
     <ClInclude Include="Movements.hpp" />
     <ClInclude Include="MovementsBuilder.hpp" />
     <ClInclude Include="Player.hpp" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Resource.hpp" />
     <ClInclude Include="Square.hpp" />
     <ClInclude Include="stdafx.h" />
@@ -126,6 +127,12 @@
     <ClCompile Include="Resource.cpp" />
     <ClCompile Include="Square.cpp" />
     <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="3inarow.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="3inarow.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
