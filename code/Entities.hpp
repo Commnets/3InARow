@@ -16,7 +16,7 @@ class EntityAnimating3InARow : public QGAMES::Entity
 		: QGAMES::Entity (__ENTITYANIMATING3INAROW__, f, d)
 							{ }
 
-	virtual QGAMES::Entity* clone ();
+	virtual QGAMES::Entity* clone () const;
 };
 
 #endif

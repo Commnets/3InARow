@@ -16,7 +16,7 @@ class MovementAnimating : public QGAMES::Movement
 		: QGAMES::Movement (__MOVEMENTENTITYANIMATING__, v)
 							{ }
 
-	virtual Movement* clone ();
+	virtual Movement* clone () const;
 	virtual QGAMES::Vector direction () const;
 	virtual QGAMES::Vector acceleration () const
 							{ return (QGAMES::Vector::_cero); }

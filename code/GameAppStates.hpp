@@ -15,7 +15,7 @@ class PresentationText3InARow : public QGAMES::ScoreObjectText
 	public:
 	PresentationText3InARow (const std::string& t = std::string (__NULL_STRING__));
 
-	virtual Entity* clone ()
+	virtual Entity* clone () const
 							{ return (new PresentationText3InARow (_text)); }
 
 	protected:

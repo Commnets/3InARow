@@ -1,7 +1,7 @@
 #include "Movements.hpp"
 
 // ---
-QGAMES::Movement* MovementAnimating::clone ()
+QGAMES::Movement* MovementAnimating::clone () const
 {
 	QGAMES::Movement* result = new MovementAnimating (_variables); 
 	result -> initialize (); 
