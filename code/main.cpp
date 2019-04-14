@@ -21,7 +21,7 @@ int _tmain (int argc, char *argv [])
 	// This instruction reads them and store in temporaly files when needed!
 	// The resource reader is deleted at the end, and all the temporal file with them!
 	QGAMES::InZipResourceReader rR 
-		(std::string (".") + __PATH_SEPARATOR__ + std::string ("temp"));
+		(std::string (".") + __PATH_SEPARATOR__ + std::string ("Temp"));
 #endif
 
 	GameApplication game;
