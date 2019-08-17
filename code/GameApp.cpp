@@ -8,11 +8,11 @@
 #include "Player.hpp"
 #include "InputHandler.hpp"
 #include "Defs.hpp"
-#include <graphicsinclude.hpp>
+#include <SDL/sdlgame.hpp>
 
 // ---
 GameApplication::GameApplication ()
-		: QGAMES::BoardGameApplication (new __QGAMESGRAPHICSLIBRARY_IMPLEMENTATIONCLASS__ ())
+		: QGAMES::BoardGameApplication (new SDLGame (false /** No FMOD. */))
 {
 #ifdef NDEBUG
 	// If the data parameter exists, then changes the default temporal file...
