@@ -14,19 +14,19 @@
     <ProjectGuid>{50F00993-BE0B-4C28-97F3-22EEB296DA9B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My3inarow</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -108,6 +108,7 @@
     <ClInclude Include="Player.hpp" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Resource.hpp" />
+    <ClInclude Include="resource1.h" />
     <ClInclude Include="Square.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -130,10 +131,10 @@
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="3inarow.rc" />
+    <Image Include="3inarow.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="3inarow.ico" />
+    <ResourceCompile Include="3inarow.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
